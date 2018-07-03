@@ -23,6 +23,8 @@
         <module>zipkin</module>
         <module>zipkin-service-hi</module>
         <module>zipkin-service-miya</module>
+        <module>service-turbine</module>
+        <module>service-lucy</module>
     </modules>
     <dependencies>
         <dependency>

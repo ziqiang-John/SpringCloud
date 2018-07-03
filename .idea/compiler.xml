@@ -11,6 +11,8 @@
         <module name="eurekaserver" />
         <module name="feign" />
         <module name="ribbon" />
+        <module name="service-lucy" />
+        <module name="service-turbine" />
         <module name="zipkin" />
         <module name="zipkin-service-hi" />
         <module name="zipkin-service-miya" />
@@ -23,6 +25,8 @@
       <module name="eurekaserver" target="1.8" />
       <module name="feign" target="1.8" />
       <module name="ribbon" target="1.8" />
+      <module name="service-lucy" target="1.6" />
+      <module name="service-turbine" target="1.6" />
       <module name="sleuth" target="1.6" />
       <module name="SpringCloud" target="1.6" />
       <module name="zipkin" target="1.6" />

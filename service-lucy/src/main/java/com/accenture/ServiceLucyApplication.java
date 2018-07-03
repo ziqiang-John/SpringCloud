@@ -11,17 +11,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
 @EnableHystrix
 @EnableHystrixDashboard
-public class EurekaClientApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(EurekaClientApplication.class, args);
+public class ServiceLucyApplication {
+    public static void main(String[] args){
+        SpringApplication.run(ServiceLucyApplication.class,args);
     }
-
     @Value("${server.port}")
     String port;
     @RequestMapping("/hello")
