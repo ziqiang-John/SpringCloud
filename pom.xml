@@ -21,6 +21,12 @@
         <module>zuul</module>
         <module>config-server</module>
         <module>config-client</module>
+        <module>eureka-server</module>
+        <module>zipkin</module>
+        <module>zipkin-service-hi</module>
+        <module>zipkin-service-miya</module>
+        <module>service-turbine</module>
+        <module>service-lucy</module>
     </modules>
     <dependencies>
         <dependency>
@@ -31,6 +37,11 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
         </dependency>
     </dependencies>
 

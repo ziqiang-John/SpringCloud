@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-client" />
+        <module name="config-server" />
+        <module name="eureka-server" />
+        <module name="eurekaclient" />
+        <module name="eurekaserver" />
+        <module name="feign" />
+        <module name="ribbon" />
+        <module name="service-lucy" />
+        <module name="service-turbine" />
+        <module name="zipkin" />
+        <module name="zipkin-service-hi" />
+        <module name="zipkin-service-miya" />
+        <module name="zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config-client" target="1.6" />
+      <module name="config-server" target="1.6" />
+      <module name="eureka-server" target="1.6" />
+      <module name="eurekaclient" target="1.8" />
+      <module name="eurekaserver" target="1.8" />
+      <module name="feign" target="1.8" />
+      <module name="ribbon" target="1.8" />
+      <module name="service-lucy" target="1.6" />
+      <module name="service-turbine" target="1.6" />
+      <module name="sleuth" target="1.6" />
+      <module name="SpringCloud" target="1.6" />
+      <module name="zipkin" target="1.6" />
+      <module name="zipkin-service-hi" target="1.6" />
+      <module name="zipkin-service-miya" target="1.6" />
+      <module name="zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
