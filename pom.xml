@@ -16,6 +16,7 @@
     <modules>
         <module>eurekaserver</module>
         <module>eurekaclient</module>
+        <module>eurekaclient2</module>
         <module>ribbon</module>
         <module>feign</module>
         <module>zuul</module>
