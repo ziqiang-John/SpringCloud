@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @EnableEurekaClient
-@RestController
 @EnableHystrix
 @EnableHystrixDashboard
 public class EurekaClientApplication {
@@ -22,15 +21,4 @@ public class EurekaClientApplication {
         SpringApplication.run(EurekaClientApplication.class, args);
     }
 
-    @Value("${server.port}")
-    String port;
-    @RequestMapping("/hello")
-    @HystrixCommand(fallbackMethod = "helloError")
-    public String hello(@RequestParam String name) {
-        return "hi "+name+",i am from port:" +port;
-    }
-
-    public String helloError(String name){
-        return "hello,"+name+",sorry,some error happen!";
-    }
 }
