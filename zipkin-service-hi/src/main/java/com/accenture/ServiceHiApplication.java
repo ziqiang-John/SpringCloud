@@ -40,4 +40,8 @@ public class ServiceHiApplication {
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
+    @Bean
+    public AlwaysSampler defaultSampler(){
+        return new AlwaysSampler();
+    }
 }

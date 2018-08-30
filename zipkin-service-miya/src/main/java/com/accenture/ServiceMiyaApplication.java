@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.sleuth.sampler.AlwaysSampler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,5 +40,9 @@ public class ServiceMiyaApplication {
     @Bean
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
+    }
+    @Bean
+    public AlwaysSampler defaultSampler(){
+        return new AlwaysSampler();
     }
 }
