@@ -28,6 +28,7 @@
         <module>zipkin-service-miya</module>
         <module>service-turbine</module>
         <module>service-lucy</module>
+        <module>security</module>
     </modules>
     <dependencies>
         <dependency>
