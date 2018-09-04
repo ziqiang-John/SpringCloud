@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -24,6 +25,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         }
         // SecurityUser实现UserDetails并将SysUser的name映射为username
         SecurityUser seu = new SecurityUser(user);
+        seu.setPassword(new BCryptPasswordEncoder().encode(seu.getPassword()));
         return  seu;
     }
 
