@@ -1,5 +1,7 @@
 package com.security.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,12 +12,11 @@ public class Role {
     @Column(name="id",length=10)
     private int id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "uid", nullable = false)
-    private User user;//角色对应的用户实体
+    @Column(name="role_name",length=100)
+    private String roleName;//角色名称
 
-    @Column(name="name",length=100)
-    private String name;//角色名称
+    @Column(name = "user_name",length = 100)
+    private String userName;
 
     public int getId() {
         return id;
@@ -24,17 +25,18 @@ public class Role {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getRoleName() {
+        return roleName;
     }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public User getUser() {
-        return user;
-    }
-    public void setUser(User user) {
-        this.user = user;
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 }

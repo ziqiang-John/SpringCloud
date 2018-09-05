@@ -50,11 +50,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     } // @formatter:on
     @Override
     protected void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception{
-//        authenticationManagerBuilder.userDetailsService(customUserService()).passwordEncoder(passwordEncoder());
-                authenticationManagerBuilder.inMemoryAuthentication()
-                .withUser("john")
-                .password(passwordEncoder().encode("123"))
-                .roles("USER");
+        authenticationManagerBuilder.userDetailsService(customUserService()).passwordEncoder(passwordEncoder());
+//                authenticationManagerBuilder.inMemoryAuthentication()
+//                .withUser("john")
+//                .password(passwordEncoder().encode("123"))
+//                .roles("USER");
     }
 
     @Bean
